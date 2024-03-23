@@ -13,4 +13,9 @@ type User struct {
 	RegistrationDate time.Time
 }
 
+type UserRole struct {
+	Id       int
+	RoleName string
+}
+
 // Role (Moderator, Admin, Student, Mentor)
