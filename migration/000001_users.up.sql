@@ -11,5 +11,6 @@ CREATE TABLE "users" (
     "email" VARCHAR(100),
     "phone_number" VARCHAR(20),
     "address" TEXT,
-    "registration_date" DATE DEFAULT CURRENT_DATE
+    "registration_date" DATE DEFAULT CURRENT_DATE,
+    "updated_at" DATE DEFAULT CURRENT_DATE
 );

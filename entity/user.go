@@ -11,6 +11,7 @@ type User struct {
 	PhoneNumber      string
 	Address          string
 	RegistrationDate time.Time
+	UpdatedAt        time.Time
 }
 
 type UserRole struct {
