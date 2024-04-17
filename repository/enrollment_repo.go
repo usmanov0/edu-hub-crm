@@ -1,15 +1,16 @@
 package repository
 
 import (
+	"context"
 	"edu-sphere-crm/entity"
 	"github.com/jackc/pgx"
 )
 
 type EnrollmentRepository interface {
-	Save(enrollment *entity.Enrollments) error
-	GetById(enrollmentId int) (*entity.Enrollments, error)
-	Update(enrollmentId int) error
-	Delete(enrollmentId int) error
+	Save(ctx context.Context, enrollment *entity.Enrollments) error
+	GetAllEnrollments(ctx context.Context) ([]entity.Enrollments, error)
+	GetById(ctx context.Context, enrollmentId int) (*entity.Enrollments, error)
+	Delete(ctx context.Context, enrollmentId int) error
 }
 
 type enrollmentRepository struct {
@@ -20,22 +21,22 @@ func NewEnrollmentRepo(db *pgx.Conn) EnrollmentRepository {
 	return &enrollmentRepository{db: db}
 }
 
-func (e *enrollmentRepository) Save(enrollment *entity.Enrollments) error {
+func (e *enrollmentRepository) Save(ctx context.Context, enrollment *entity.Enrollments) error {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (e *enrollmentRepository) GetById(enrollmentId int) (*entity.Enrollments, error) {
+func (e *enrollmentRepository) GetAllEnrollments(ctx context.Context) ([]entity.Enrollments, error) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (e *enrollmentRepository) Update(enrollmentId int) error {
+func (e *enrollmentRepository) GetById(ctx context.Context, enrollmentId int) (*entity.Enrollments, error) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (e *enrollmentRepository) Delete(enrollmentId int) error {
+func (e *enrollmentRepository) Delete(ctx context.Context, enrollmentId int) error {
 	//TODO implement me
 	panic("implement me")
 }
